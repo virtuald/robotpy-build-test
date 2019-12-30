@@ -1,0 +1,36 @@
+[build-system]
+requires = ["robotpy-build"]
+
+[tool.robotpy-build]
+base_package = "pybind_test"
+
+[tool.robotpy-build.wrappers."pybind_test"]
+
+# the module gets 'downloaded' by running 'Make'
+name = "module"
+baseurl = ""
+version = "0.0.0"
+
+libs = []
+
+generate = [
+    {Base = "base.h"},
+    {Child = "child.h"},
+    {GrandChild = "grandchild.h"},
+    {Other = "other.h"},
+]
+
+generation_data = "gen/data.yml"
+
+sources = [
+    "pybind_test/pybind_test.cpp",
+]
+
+[tool.robotpy-build.metadata]
+name = "pybind_test"
+description = "Test project for verifying robotpy-build behavior"
+author = "RobotPy Development Team"
+author_email = "robotpy@googlegroups.com"
+url = "https://github.com/robotpy/robotpy-build"
+license = "BSD-3-Clause"
+install_requires = []

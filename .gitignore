@@ -1,0 +1,14 @@
+*.pyc
+*.egg-info
+
+.vscode
+/build
+
+*.so
+*.dylib
+*.dll
+
+/pybind_test/__init__.py
+/pybind_test/pkgcfg.py
+/pybind_test/version.py
+/pybind_test/include

@@ -1,0 +1,8 @@
+---
+
+classes:
+  Base: {}
+  Child: {}
+  GrandChild: {}
+  Other:
+    shared_ptr: true
